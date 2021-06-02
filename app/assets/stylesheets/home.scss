@@ -1,3 +1,33 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+header {
+  height: 100px;
+  background-color: orange;
+  color: white;
+}
+
+.header-logo {
+  font-size: 30px;
+  padding-left: 40px;
+  padding-top: 30px;
+}
+
+.header-menu li {
+  float:right;
+}
+
+
+.maintop {
+  background-color: blue;
+  color: white;
+}
+
+.maintop-message h1 {
+  font-size: 40px
+}
+
+.maintop-message h3 {
+  font-size: 20px
+}
