@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'users/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  get "users/:id" => "users#show"
+
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
