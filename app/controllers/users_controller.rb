@@ -22,4 +22,13 @@ class UsersController < ApplicationController
     @users = User.find_by(id: params[:id])
   end
 
+  def update
+    @users = User.find_by(id: params[:id])
+    @users.name = params[:name]
+    @users.email = params[:email]
+    @users.password_digest = params[:password_digest]
+    @users.save
+    redirect_to("/users/index")
+  end
+
 end

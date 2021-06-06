@@ -1,1 +1,11 @@
 users#edit
+
+<%= form_tag("/users/#{@users.id}/update") do %>
+<p>ユーザー名</p>
+<input name="name" value="<%= @users.name %>">
+<p>メールアドレス</p>
+<input name="email" value="<%= @users.email %>">
+<p>パスワード</p>
+<input name="password_digest" value="<%= @users.password_digest %>">
+<input type="submit" value="保存">
+<% end %>

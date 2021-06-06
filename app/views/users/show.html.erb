@@ -1,3 +1,5 @@
 Users#show
 <%= @users.name %>
 <%= @users.email %>
+
+<%= link_to("編集", "/users/#{@users.id}/edit") %>
