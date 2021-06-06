@@ -1,8 +1,10 @@
 users#new
+<%= form_tag("/users/create") do %>
 <p>ユーザー名</p>
-<input>
+<input name="name">
 <p>メールアドレス</p>
-<input>
+<input name="email">
 <p>パスワード</p>
-<input>
+<input name="password_digest">
 <input type="submit" value="新規登録">
+<% end %>
