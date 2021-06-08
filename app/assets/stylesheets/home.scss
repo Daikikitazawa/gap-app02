@@ -14,10 +14,14 @@ header {
   padding-top: 30px;
 }
 
-.header-menu li {
+.header-menu {
   float:right;
+}
+
+.header-menu li {
+  float:left;
   padding-left:10px;
-  list-style: none; 
+  list-style: none;
 }
 
 
