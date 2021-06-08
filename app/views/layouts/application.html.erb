@@ -20,6 +20,9 @@
           <li><%= link_to("投稿一覧", "/posts/index") %></li>
           <li><%= link_to("新規登録", "/signup") %></li>
           <li><%= link_to("ログイン", "/login") %></li>
+          <li>ユーザーID：
+            <%= session[:user_id] %>
+          </li>
         </ul>
       </div>
     </header>
