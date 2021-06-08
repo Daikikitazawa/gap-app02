@@ -14,8 +14,12 @@ class UsersController < ApplicationController
 
   def create
     @users = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest])
-    @users.save
-    redirect_to("/users/index")
+    if @users.save
+      session[:user_id] = @users.id
+      redirect_to("/users/index")
+    else
+      render("users/new")
+    end
   end
 
   def edit
