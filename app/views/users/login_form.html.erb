@@ -5,4 +5,9 @@ users#login_form
  <input type="" name="email">
  <p>パスワード</p>
  <input type="password" name="password_digest">
+ <input type="submit" value="ログイン">
+<% end %>
+
+<% if @error_message %>
+<%= @error_message %>
 <% end %>
