@@ -3,3 +3,7 @@ Users#show
 <%= @users.email %>
 
 <%= link_to("編集", "/users/#{@users.id}/edit") %>
+
+<% @users.posts.each do |post| %>
+<%= link_to(post.content, "/posts/#{post.id}") %>
+<% end %>
