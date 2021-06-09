@@ -1,9 +1,9 @@
 Users#show
-<%= @users.name %>
-<%= @users.email %>
+<%= @user.name %>
+<%= @user.email %>
 
-<%= link_to("編集", "/users/#{@users.id}/edit") %>
+<%= link_to("編集", "/users/#{@user.id}/edit") %>
 
-<% @users.posts.each do |post| %>
+<% @user.posts.each do |post| %>
 <%= link_to(post.content, "/posts/#{post.id}") %>
 <% end %>

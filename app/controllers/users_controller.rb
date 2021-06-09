@@ -5,17 +5,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.find_by(id: params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   def new
-    @users = User.new
+    @user = User.new
   end
 
   def create
-    @users = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest])
-    if @users.save
-      session[:user_id] = @users.id
+    @user = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest])
+    if @user.save
+      session[:user_id] = @user.id
       redirect_to("/users/index")
     else
       render("users/new")
@@ -23,15 +23,15 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @users = User.find_by(id: params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   def update
-    @users = User.find_by(id: params[:id])
-    @users.name = params[:name]
-    @users.email = params[:email]
-    @users.password_digest = params[:password_digest]
-    @users.save
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.password_digest = params[:password_digest]
+    @user.save
     redirect_to("/users/index")
   end
 
