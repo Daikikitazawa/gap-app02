@@ -1,6 +1,5 @@
 posts#index
 <% @posts.each do |post| %>
-  
-  <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+  <%= link_to(post.user.name, "/users/#{post.user.id}") %>
   <%= link_to(post.content, "/posts/#{post.id}") %>
 <% end %>

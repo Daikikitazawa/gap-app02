@@ -15,10 +15,11 @@ end
 
   def show
     @post = Post.find_by(id: params[:id])
-    @user = User.find_by(id: params[:id])
-  end
+    @user = User.find_by(id: @post.user_id)
+end
 
   def new
+    @post = Post.new
   end
 
   def create
