@@ -64,4 +64,7 @@ end
     redirect_to("/login")
   end
 
+  def ranking
+  end
+
 end
