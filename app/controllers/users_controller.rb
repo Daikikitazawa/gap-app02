@@ -39,6 +39,11 @@ end
     @user.name = params[:name]
     @user.email = params[:email]
     @user.password_digest = params[:password_digest]
+   if params[:image]
+    @user.image_name = "#{@user.id}.jpg"
+    image = params[:image]
+    File.binwrite("public/user_images/#{@user.image_name}", image.read)
+   else
     @user.save
     redirect_to("/users/index")
   end
