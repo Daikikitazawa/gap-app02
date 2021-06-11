@@ -21,7 +21,7 @@ end
   end
 
   def create
-    @user = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest])
+    @user = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest], image_name: "default_user.jpg")
     if @user.save
       session[:user_id] = @user.id
       redirect_to("/users/index")
