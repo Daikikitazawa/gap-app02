@@ -47,6 +47,7 @@ end
     @user.save
     redirect_to("/users/index")
   end
+end
 
   def login_form
   end

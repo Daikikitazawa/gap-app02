@@ -1,5 +1,6 @@
 <h1>Users#index</h1>
 <% @users.each do |user| %>
-  <img src="<%="/user_images/#{@user.image_name} "%>">
+  <img src="<%="/user_images/#{user.image_name} "%>">
+  <%= image_tag @post.image.thumb.url %>
   <%= link_to(user.name, "/users/#{user.id}") %>
 <% end %>

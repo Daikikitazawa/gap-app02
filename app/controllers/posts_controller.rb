@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
   before_action :ensure_currect_user,{only: [:edit, :update, :destroy]}
+  protect_from_forgery :only => ["create"]
+
+  def user_params
+    params.require(:post).permit(:image)
+  end
 
   def ensure_currect_user
     @post = Post.find_by(id: params[:id])
