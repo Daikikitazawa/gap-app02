@@ -2,38 +2,81 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-header {
-  height: 130px;
-  background-color: orange;
-  color: white;
+body {
+ display:flex;
+ color: black;
 }
+
+header {
+
+}
+
+.sidebar {
+  background-color: white;
+  color: black;
+  width:20%;
+  height:1000px;
+  text-align:center;
+
+}
+
+.mainbar {
+  background-color: white;
+  color: black;
+  width:80%;
+  height:1000px;
+  text-align:center;
+}
+
 
 .header-logo {
   font-size: 30px;
-  padding-left: 40px;
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-left: 38px;
 }
 
 .header-menu {
-  float:right;
+  padding-top:35px;
 }
 
 .header-menu li {
   float:left;
-  padding-left:10px;
   list-style: none;
+  color: black;
+  font-size: 17px;
+  padding-top: 10px;
+  font-weight: normal;
 }
 
 
 .maintop {
-  background-color: blue;
-  color: white;
+  float:left;
+  color: black;
+  display: flex;
+}
+
+.maintop-message {
+  width: 60%
 }
 
 .maintop-message h1 {
-  font-size: 40px
+  text-align: left;
+  font-size: 125px;
+  line-height: 95%;
+  padding-top: 70px;
+  letter-spacing: -0.02em;
 }
 
-.maintop-message h3 {
-  font-size: 20px
+.votes {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  width: 40%;
+  padding-top: 675px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+}
+
+.link {
+  color: black;
+  text-decoration:none !important;
 }
