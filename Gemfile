@@ -7,6 +7,9 @@ ruby '3.0.0'
 gem 'carrierwave'
 gem 'mini_magick'
 
+# パスワードのハッシュ化用 2021/06/16追加
+gem 'bcrypt'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
