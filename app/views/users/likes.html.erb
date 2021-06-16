@@ -1,0 +1,7 @@
+users#likes
+
+<% @likes.each do |like| %>
+<% post = Post.find_by(id: like.post_id) %>
+<%= link_to(post.user.name, "/users/#{post.user.id}") %>
+<%= link_to(post.content, "/posts/#{post.id}") %>
+<% end %>

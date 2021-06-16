@@ -19,6 +19,7 @@
           <% if @current_user %>
              <li><%= link_to("Ranking", "/users/ranking", class:"link") %></li>
              <li><%= link_to("Index", "/posts/index", class:"link") %></li>
+             <li><%= link_to("Voting", "/users/#{@current_user.id}/likes", class:"link") %></li>
              <li><%= link_to("Post", "/posts/new", class:"link") %></li>
              <li>
                <%= link_to("Mypage", "/users/#{@current_user.id}", class:"link") %>
