@@ -1,7 +1,5 @@
-users#ranking
+posts#ranking
 <% @posts.each do |post| %>
-  <%= @likes_count %>
-<% end %>
-<% @posts.each do |post| %>
+  <%= link_to(post.user.name, "/users/#{post.user.id}") %>
   <%= link_to(post.content, "/posts/#{post.id}") %>
 <% end %>
