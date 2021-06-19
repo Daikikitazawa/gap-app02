@@ -24,7 +24,7 @@ end
     @user = User.new(name: params[:name], email: params[:email], password_digest: params[:password_digest], image_name: "default_user.jpg")
     if @user.save
       session[:user_id] = @user.id
-      redirect_to("/users/index")
+      redirect_to("/posts/index")
     else
       render("users/new")
     end
@@ -45,7 +45,7 @@ end
     File.binwrite("public/user_images/#{@user.image_name}", image.read)
    else
     @user.save
-    redirect_to("/users/index")
+    redirect_to("/users/#{@current_user.id}")
   end
 end
 
