@@ -22,7 +22,7 @@ end
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
     @likes_count = Like.where(post_id: @post.id).count
-end
+  end
 
   def new
     @post = Post.new
@@ -54,6 +54,9 @@ end
 
   def ranking
     @posts = Post.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
+  end
+
+  def test
   end
 
 end

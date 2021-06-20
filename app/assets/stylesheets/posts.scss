@@ -1,3 +1,28 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.btn {
+  padding: 8px 24px;
+  color: black;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #ffefd5;
+  cursor: pointer;
+  box-shadow: 0 7px #ffdab9;
+}
+
+.message:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
+}

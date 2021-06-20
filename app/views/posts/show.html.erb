@@ -2,12 +2,12 @@ posts#show
 <%= @post.content %>
 
 <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
-<%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
-<span class="fa fa-heart like-btn-unlike"></span>
+<%= link_to("/likes/#{@post.id}/destroy", {method: "post" ,class: "btn message"}) do %>
+<span class="btn message">投票を取り消す</span>
 <% end %>
 <% else %>
-<%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
-<span class="fa fa-heart like-btn"></span>
+<%= link_to("/likes/#{@post.id}/create", {method: "post",class: "btn message"}) do %>
+<span class="btn message">投票する</span>
 <% end %>
 <% end %>
 <%= @likes_count %>
