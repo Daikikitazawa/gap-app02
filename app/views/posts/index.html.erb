@@ -1,8 +1,12 @@
 posts#index
+
 <% @posts.each do |post| %>
   <%= link_to(post.user.name, "/users/#{post.user.id}") %>
   <%= link_to(post.content, "/posts/#{post.id}") %>
+  <%= link_to (image_tag "#{post.image.url}" , class:"index-sized", method: :get), post_path(post.id) %>
 <% end %>
+
+
 
 <a href="https://px.a8.net/svt/ejp?a8mat=3HEBHM+6F07HU+4IMQ+62ENL" rel="nofollow">
 <img border="0" width="936" height="120" alt="" src="https://www22.a8.net/svt/bgt?aid=210620074388&wid=001&eno=01&mid=s00000021077001019000&mc=1"></a>
