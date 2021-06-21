@@ -1,4 +1,11 @@
 posts#show
+
+<% if @post.image? %>
+　　<%= image_tag @post.image.url %>
+　<% else %>
+　　<%= image_tag '/user.images/default_user.jpg' %>
+　<% end %>
+
 <%= @post.content %>
 
 <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
@@ -11,8 +18,18 @@ posts#show
 <% end %>
 <% end %>
 <%= @likes_count %>
-<%= image_tag @post.image.thumb.url %>
+
 <% if @post.user_id == @current_user.id %>
 <%= link_to("編集", "/posts/#{@post.id}/edit") %>
 <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
 <% end %>
+
+
+
+<a href="https://px.a8.net/svt/ejp?a8mat=3HEBHM+6EERW2+4OY8+609HT" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=210620074387&wid=001&eno=01&mid=s00000021896001009000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=3HEBHM+6EERW2+4OY8+609HT" alt="">
+
+<a href="https://px.a8.net/svt/ejp?a8mat=3HEBHM+6F07HU+4IMQ+656YP" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=210620074388&wid=001&eno=01&mid=s00000021077001032000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=3HEBHM+6F07HU+4IMQ+656YP" alt="">

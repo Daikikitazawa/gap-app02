@@ -2,10 +2,6 @@ class PostsController < ApplicationController
   before_action :ensure_currect_user,{only: [:edit, :update, :destroy]}
   protect_from_forgery :only => ["create"]
 
-  def user_params
-    params.require(:post).permit(:image)
-  end
-
   def ensure_currect_user
     @post = Post.find_by(id: params[:id])
     if @post.user_id != @current_user.id
@@ -29,7 +25,7 @@ end
   end
 
   def create
-    @post = Post.new(content: params[:content], user_id: @current_user.id)
+    @post = Post.new(**post_params, content: params[:content], user_id: @current_user.id)
     @post.save
     redirect_to("/posts/index")
   end
@@ -57,6 +53,11 @@ end
   end
 
   def test
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:content, :image)
   end
 
 end

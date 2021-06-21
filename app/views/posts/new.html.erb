@@ -1,10 +1,14 @@
 posts#new
-<%= form_tag("/posts/create")do %>
+<%= form_tag("/posts/create", {multipart:true})do %>
 <textarea name="content"></textarea>
 
 <%= form_for @post, :html => {:multipart => true} do |f| %>
+
 <%= f.label :image %>
+<%= image_tag @post.image.thumb.url if @post.image? %>
 <%= f.file_field :image %>
+<%= f.hidden_field :image_cache %>
+
 
 <input type="submit" value="投稿">
 <% end %>

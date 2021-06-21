@@ -42,12 +42,14 @@ end
    if params[:image]
     @user.image_name = "#{@user.id}.jpg"
     image = params[:image]
-    File.binwrite("public/user_images/#{@user.image_name}", image.read)
-   else
-    @user.save
-    redirect_to("/users/#{@current_user.id}")
+    File.binwrite("public/user.images/#{@user.image_name}", image.read)
   end
-end
+   if @user.save
+    redirect_to("/users/#{@user.id}")
+   else
+    render("users/edit")
+   end
+  end
 
   def login_form
   end
