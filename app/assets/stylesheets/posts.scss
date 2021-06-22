@@ -37,6 +37,26 @@
 }
 
 .index-sized {
-  height:150px;
-  width:100px
+  height:370px;
+  width:260px
+}
+
+
+
+
+.image {
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	width: 260px;	/*画像の幅*/
+	height: 370px;	/*画像の高さ*/
+  float:left;
+  padding: 1px 1px;
+}
+.image img {
+	display: block;
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+.image img:hover {
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+  opacity: 0.8;
 }
