@@ -12,8 +12,8 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+require('jquery')
+
 //= require activestorage
 //= require turbolinks
-//= require jquery #追加
-//= require jquery_ujs #追加
 //= require_tree .
