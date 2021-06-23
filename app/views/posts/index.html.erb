@@ -1,7 +1,7 @@
 
 <ul class="image-list jscroll">
 <% @posts.each do |post| %>
-<div class="image">
+<div class="image fadeUpTrigger">
   <%= link_to (image_tag "#{post.image.url}" , class:"index-sized", method: :get), post_path(post.id) %>
 </div>
 <% end %>
