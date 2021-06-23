@@ -10,6 +10,10 @@ gem 'mini_magick'
 # パスワードのハッシュ化用 2021/06/16追加
 gem 'bcrypt'
 
+# RailsでjQueryを使えるようにす 2021/06/22追加
+gem "jquery-rails"
+gem 'jquery-turbolinks'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
