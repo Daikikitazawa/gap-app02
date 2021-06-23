@@ -60,3 +60,11 @@
 	transition-duration: 0.3s;	/*変化に掛かる時間*/
   opacity: 0.8;
 }
+
+ul.image-list {
+  padding: 0;
+}
+
+nav.pagination {
+  display: none;
+}
