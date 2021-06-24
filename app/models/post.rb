@@ -3,6 +3,9 @@ class Post < ApplicationRecord
   validates :user_id,{presence: true}
   validates :content,{presence: true}
 
+  # 投稿のPV数を取得する 2021/06/24追加
+  is_impressionable counter_cache: true
+
   has_many :images
 
   belongs_to :user

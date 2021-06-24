@@ -1,5 +1,7 @@
 posts#show
 
+<%= @post.impressions_count %>
+
 <% if @post.image? %>
 　　<%= image_tag @post.image.url %>
 　<% else %>

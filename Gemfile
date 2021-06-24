@@ -17,6 +17,9 @@ gem 'jquery-turbolinks'
 # ページネーション 2021/06/23追加
 gem 'kaminari'
 
+# 投稿のPV数を取得する 2021/06/24追加
+gem 'impressionist'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
