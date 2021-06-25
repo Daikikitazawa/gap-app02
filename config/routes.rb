@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get "/" => "home#top"
   get "about" => "home#about"
 
+  resources :likes
   resources :posts
   resources :blogs
      root "home#top"

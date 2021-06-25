@@ -1,5 +1,9 @@
-posts#ranking
+
+<ul class="image-list jscroll">
 <% @posts.each do |post| %>
-  <%= link_to(post.user.name, "/users/#{post.user.id}") %>
-  <%= link_to(post.content, "/posts/#{post.id}") %>
+<div class="image fadeUpTrigger">
+  <%= link_to (image_tag "#{post.image.url}" , class:"index-sized", method: :get), post_path(post.id) %>
+</div>
 <% end %>
+<%= paginate @posts %>
+</ul>

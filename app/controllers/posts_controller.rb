@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :ensure_currect_user,{only: [:edit, :update, :destroy]}
   protect_from_forgery :only => ["create"]
+  impressionist :actions=> [:ranking]
 
   def ensure_currect_user
     @post = Post.find_by(id: params[:id])
@@ -53,6 +54,8 @@ end
 
   def ranking
     @posts = Post.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(4)
+    @post = Post.find_by(id: params[:id])
   end
 
   def test
