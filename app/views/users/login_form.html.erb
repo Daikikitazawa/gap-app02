@@ -1,11 +1,19 @@
 users#login_form
 
+<div class="form-wrapper">
+  <h1>Sign In</h1>
 <%= form_tag("/login") do %>
+<div class="form-item">
  <p>メールアドレス</p>
  <input type="" name="email">
+ </div>
+ <div class="form-item">
  <p>パスワード</p>
  <input type="password" name="password_digest">
+ </div>
+ <div class="button-panel">
  <input type="submit" value="ログイン">
+ </div>
 <% end %>
 </div>
 
