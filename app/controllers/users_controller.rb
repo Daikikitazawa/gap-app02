@@ -78,6 +78,9 @@ end
   def likes
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
+    @posts = Post.all.order(created_at: :desc)
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(4)
+    @post = Post.find_by(id: params[:id])
   end
 
 end

@@ -1,7 +1,11 @@
-users#likes
+Voting
 
+<ul class="image-list jscroll">
 <% @likes.each do |like| %>
 <% post = Post.find_by(id: like.post_id) %>
-<%= link_to(post.user.name, "/users/#{post.user.id}") %>
-<%= link_to(post.content, "/posts/#{post.id}") %>
+<div class="image fadeUpTrigger">
+  <%= link_to (image_tag "#{post.image.url}" , class:"index-sized", method: :get), post_path(post.id) %>
+</div>
 <% end %>
+<%= paginate @posts %>
+</ul>
